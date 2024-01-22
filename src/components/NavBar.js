@@ -2,7 +2,6 @@ import React, { use, useState } from "react";
 import { Roboto, Roboto_Flex } from "next/font/google"
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { MoonIcon, SunIcon } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import AsterIcon from "../../public/images/profile/astersofticon.png"
