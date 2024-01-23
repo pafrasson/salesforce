@@ -8,7 +8,7 @@ const Footer = () => {
         font-medium text-lg sm:text-base
         ">
             <Layout className="py-2 flex items-center justify-center bg-sky-600 text-light font-roboto 
-            lg:flex-col lg:py-6">
+            lg:flex-col lg:py-2">
                 <span>{new Date().getFullYear()} &copy; Astersoft</span>
             </Layout>
         </footer>
