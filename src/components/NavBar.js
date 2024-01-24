@@ -78,8 +78,7 @@ const NavBar = () => {
 
             <div className="w-full flex justify-between items-center lg:hidden">
                 <nav>
-                    <CustomLink href="/" title="Ordem de Serviço" className="mr-4" />
-                    <CustomLink href="/pedido" title="Pedido" className="mx-4" />
+                    <CustomLink href="/" title="Força de vendas" className="mr-4 text-sky-600" />
                 </nav>
                 <nav className="flex items-center justify-center flex-wrap">
                     <motion.a href="https://astersoft.com.br" target={"_blank"}
@@ -111,8 +110,7 @@ const NavBar = () => {
                         className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2
              -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg py-32">
                         <nav className="flex items-center flex-col justify-center">
-                            <CustomMobileLink href="/" title="Ordem de serviço" className="" toggle={handleClick} />
-                            <CustomMobileLink href="/pedido" title="Pedido" className="" toggle={handleClick} />
+                            <CustomMobileLink href="/" title="Força de vendas" className="text-sky-600" toggle={handleClick} />
                         </nav>
                         <nav className="flex items-center justify-center flex-wrap mt-2">
                             <motion.a href="https://astersoft.com.br" target={"_blank"}
