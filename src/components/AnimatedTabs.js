@@ -13,27 +13,25 @@ export default function AnimatedTabs() {
 
     return (
         <div className="flex justify-center items-center mt-10">
-            <div className="bg-white dark:bg-black/20 overflow-hidden shadow-md flex flex-col">
-                <nav className="bg-fdfdfd p-5 pb-0 border-solid h-44">
-                    <ul className="flex-grow-0 flex justify-start items-end flex-wrap w-full">
+            <div className="overflow-hidden flex flex-col">
+                <nav className="p-4 pb-0">
+                    <ul className="flex space-x-5">
                         {tabs.map((item) => (
-                            <li
+                            <button
                                 key={item.label}
-                                className={`m-3 font-poppins font-semibold text-base border-solid w-full p-6 relative
-                                    bg-white dark:bg-black/20 cursor-pointer h-24 flex justify-between 
-                                    items-center flex-1 min-w-0 select-none
-                                    ${item === selectedTab ? "selected" : ""}`}
+                                className={`m-3 font-poppins font-semibold text-base w-100 p-8 flex justify-between items-center select-none
+                                    ${item === selectedTab ? "selected text-sky-600" : "hover:text-sky-600"}`}
                                 onClick={() => handleTabClick(item)}
                             >
                                 {`${item.icon} ${item.label}`}
                                 {item === selectedTab ? (
                                     <div className="underline absolute bottom-0 left-0 right-0 h-1"></div>
                                 ) : null}
-                            </li>
+                            </button>
                         ))}
                     </ul>
                 </nav>
-                <main className="flex items-center justify-center">
+                <main className="flex items-center justify-center pb-6">
                     <AnimatePresence>
                         {/* Renderizar OSInput se a aba selecionada for "O.S" */}
                         {selectedTab.label === "O.S" && (
@@ -42,7 +40,7 @@ export default function AnimatedTabs() {
                                 initial={{ y: 10, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: -10, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
+                                transition={{ duration: 0.1 }}
                             >
                                 <OSinput />
                             </motion.div>
