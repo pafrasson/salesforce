@@ -14,22 +14,22 @@ export default function AnimatedTabs() {
     return (
         <div className="flex justify-center items-center mt-10">
             <div className="overflow-hidden flex flex-col">
-                <nav className="p-4 pb-0">
-                    <ul className="flex space-x-5">
+                <nav className="p-4 flex">
                         {tabs.map((item) => (
-                            <button
+                            <motion.button
                                 key={item.label}
-                                className={`m-3 font-poppins font-semibold text-base w-100 p-8 flex justify-between items-center select-none
-                                    ${item === selectedTab ? "selected text-sky-600" : "hover:text-sky-600"}`}
+                                className={`m-3 font-poppins font-semibold text-base p-8 flex justify-between items-center select-none
+                                 rounded-full relative px-3 py-1.5
+                                    ${item === selectedTab ? " bg-slate-300 dark:bg-gray-700 text-sky-600" : "hover:text-sky-600"}`}
                                 onClick={() => handleTabClick(item)}
+                                style={{ borderRadius: 9999 }}
                             >
                                 {`${item.icon} ${item.label}`}
                                 {item === selectedTab ? (
                                     <div className="underline absolute bottom-0 left-0 right-0 h-1"></div>
                                 ) : null}
-                            </button>
+                            </motion.button>
                         ))}
-                    </ul>
                 </nav>
                 <main className="flex items-center justify-center pb-6">
                     <AnimatePresence>
@@ -39,8 +39,7 @@ export default function AnimatedTabs() {
                                 key={selectedTab ? selectedTab.label : "empty"}
                                 initial={{ y: 10, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                exit={{ y: -10, opacity: 0 }}
-                                transition={{ duration: 0.1 }}
+                                transition={{ duration: 0.2 }}
                             >
                                 <OSinput />
                             </motion.div>
@@ -52,7 +51,6 @@ export default function AnimatedTabs() {
                                 key={selectedTab ? selectedTab.label : "empty"}
                                 initial={{ y: 10, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                exit={{ y: -10, opacity: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
                                 <PedidoInput />
@@ -65,7 +63,6 @@ export default function AnimatedTabs() {
                                 key={selectedTab ? selectedTab.label : "empty"}
                                 initial={{ y: 10, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                exit={{ y: -10, opacity: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
                                 {selectedTab ? selectedTab.icon : ""}
