@@ -18,34 +18,34 @@ const Navigation = () => {
 
   return (
     <div
-      className={`hidden lg:block fixed bottom-0 w-full py-4 z-10 bg-zinc-100 dark:bg-zinc-950 border-t dark:border-zinc-800 border-zinc-200 shadow-lg ${navClass}`}
+      className={`hidden lg:block fixed bottom-0 w-full py-4 z-10 dark:text-light bg-zinc-100 dark:bg-zinc-950 border-t dark:border-zinc-800 border-zinc-200 shadow-lg ${navClass}`}
     >
       <div className="flex flex-row justify-around items-center bg-transparent w-full">
         <Link href="/" className="flex items-center relative">
           {isVendasActive ? (
-            <Icon icon="mingcute:home-5-fill" width="32" height="32" />
+            <Icon icon="ph:note-pencil-fill" width="32" height="32" />
           ) : (
-            <Icon icon="mingcute:home-5-line" width="32" height="32" />
+            <Icon icon="ph:note-pencil-light" width="32" height="32" />
           )}
           {/* <span className="h-2 w-2 rounded-full bg-sky-500 absolute -top-0.5 right-[3px]"></span> */}
         </Link>
         <Link href="/dashboard" className="flex items-center">
           {isDashActive ? (
             <Icon
-              icon="icon-park-outline:sales-report"
+              icon="material-symbols:finance-mode-rounded"
               width="32"
               height="32"
               className="stroke-current stroke-5"
             />
           ) : (
-            <Icon icon="icon-park-outline:sales-report" width="32" height="32" />
+            <Icon icon="material-symbols-light:finance-mode-rounded" width="32" height="32" />
           )}
         </Link>
         <Link href="/settings" className="flex items-center">
           {isConfigActive ? (
-            <Icon icon="icon-park-outline:config" width="32" height="32" />
+            <Icon icon="ph:gear-fill" width="32" height="32" />
           ) : (
-            <Icon icon="icon-park-outline:config" width="32" height="32" />
+            <Icon icon="ph:gear-light" width="32" height="32" />
           )}
         </Link>
       </div>
