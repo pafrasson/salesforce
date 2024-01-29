@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar'
 import Footer from '@/components/Footer'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
+import Navigation from '@/components/mobile/Navigation'
 
 const roboto = Roboto_Serif({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
         <AnimatePresence mode='wait'>
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
+        <Navigation />
         <Footer />
       </main>
     </>

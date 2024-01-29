@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const { fontFamily } = require("tailwindcss/defaultTheme")
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -16,6 +17,10 @@ module.exports = {
           '100%, 0%': { transform: 'rotate(-0.5deg)' },
           '50%': { transform: 'rotate(0.5deg)' },
         }
+      },
+      boxShadow: {
+        myShadow1: "4.1px -5px 0 0 rgb(17,24,39)",
+        myShadow2: "-4.1px -5px 0 0 rgb(17,24,39)",
       },
       animation: {
         'trans-right': 'trans-right 1.5s ease-in-out infinite',
@@ -59,5 +64,7 @@ module.exports = {
       // => @media (max-width: 479px) { ... }
     },
   },
-  plugins: [],
+  plugins: [
+    addDynamicIconSelectors(),
+  ],
 };

@@ -2,7 +2,6 @@ import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import { motion } from "framer-motion";
-import OSinput from '@/components/OSinput';
 import AsterImg from '../../public/images/profile/astersofticon.png'
 import AnimatedTabs from '@/components/AnimatedTabs';
 
