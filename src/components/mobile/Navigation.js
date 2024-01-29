@@ -41,7 +41,7 @@ const Navigation = () => {
             <Icon icon="icon-park-outline:sales-report" width="32" height="32" />
           )}
         </Link>
-        <Link href="/" className="flex items-center">
+        <Link href="/settings" className="flex items-center">
           {isConfigActive ? (
             <Icon icon="icon-park-outline:config" width="32" height="32" />
           ) : (

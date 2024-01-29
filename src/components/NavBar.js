@@ -66,16 +66,6 @@ const NavBar = () => {
         <header className={`${roboto.className} w-full px-36 py-8 font-medium flex items-center justify-between
         dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8
         `}>
-
-            <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm
-                 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5
-                 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm
-                 ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
-            </button>
-
             <div className="w-full flex justify-between items-center lg:hidden">
                 <nav>
                     <CustomLink href="/" title="Força de vendas" className="mr-4 text-sky-600" />

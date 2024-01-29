@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="description" content="" />
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
-        <Layout className='pt-0 md:pt-16 sm:pt-8'>
+        <Layout className='pt-0'>
           <div className="flex items-center justify-center w-full flex-col">
             <motion.div>
             <Image src={AsterImg} alt='PedroFrasson' className='w-20 h-auto md:inline-block md:w-20'
