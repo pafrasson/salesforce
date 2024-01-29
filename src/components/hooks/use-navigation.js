@@ -22,7 +22,7 @@ const useNavigation = () => {
       case '/dashboard':
         setIsDashActive(true);
         break;
-      case '/':
+      case '/settings':
         setIsConfigActive(true);
         break;
       default:
