@@ -14,7 +14,7 @@ const clientes = () => {
     </Head>
     <Sidebar>
     <main className='min-h-screen'>
-      <Layout className='flez col-span-1'>
+      <Layout className=''>
         <TopCards/>
       </Layout>
     </main>

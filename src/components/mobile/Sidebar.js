@@ -15,11 +15,11 @@ const Sidebar = ({ children }) => {
         <div className='flex flex-col items-center'>
           <Link href='/dashboard'>
             {isDashActive ? (
-              <div className='bg-sky-600 dark:text-white p-3 rounded-lg inline-block'>
+              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 my-4 p-3 rounded-lg inline-block'>
                 <Icon icon="material-symbols:finance-mode-rounded" width="32" height="32" />
               </div>
             ) : (
-              <div className='bg-gray-100 dark:bg-black dark:text-white p-3 rounded-lg inline-block'>
+              <div className='bg-gray-100 dark:bg-black dark:text-white hover:bg-gray-200 my-4 p-2 rounded-lg inline-block'>
                 <Icon icon="material-symbols-light:finance-mode-rounded" width="32" height="32" />
               </div>
             )}
@@ -31,7 +31,7 @@ const Sidebar = ({ children }) => {
                 <Icon icon="fluent:people-32-filled" width="32" height="32" />
               </div>
             ) : (
-              <div className='bg-gray-100 dark:bg-black dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
+              <div className='bg-gray-100 dark:bg-black dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-2 rounded-lg inline-block'>
                 <Icon icon="fluent:people-32-regular" width="32" height="32" />
               </div>
             )}
@@ -43,7 +43,7 @@ const Sidebar = ({ children }) => {
                 <Icon icon="streamline:subscription-cashflow-solid" width="32" height="32" />
               </div>
             ) : (
-              <div className='bg-gray-100 dark:bg-black dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
+              <div className='bg-gray-100 dark:bg-black dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-2 rounded-lg inline-block'>
                 <Icon icon="streamline:subscription-cashflow" width="32" height="32" />
               </div>
             )}
