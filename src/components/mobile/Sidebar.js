@@ -11,11 +11,11 @@ const Sidebar = ({ children }) => {
   } = useNavigationSidebar();
   return (
     <div className='flex'>
-      <div className='fixed w-20 h-screen p-4 dark:bg-zinc-900 dark:border-black bg-white border-r-[1px] flex flex-col justify-between'>
+      <div className='fixed w-20 sm:w-14 h-screen p-4 dark:bg-zinc-900 dark:border-black bg-white border-r-[1px] flex flex-col justify-between'>
         <div className='flex flex-col items-center'>
           <Link href='/dashboard'>
             {isDashActive ? (
-              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 my-4 p-3 rounded-lg inline-block'>
+              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 my-4 p-2 rounded-lg inline-block'>
                 <Icon icon="material-symbols:finance-mode-rounded" width="32" height="32" />
               </div>
             ) : (
@@ -27,7 +27,7 @@ const Sidebar = ({ children }) => {
           <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
           <Link href='/clientes'>
             {isClientesActive ? (
-              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
+              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-2 rounded-lg inline-block'>
                 <Icon icon="fluent:people-32-filled" width="32" height="32" />
               </div>
             ) : (
@@ -39,7 +39,7 @@ const Sidebar = ({ children }) => {
           <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
           <Link href='/pedidosdash'>
             {isPedidosActive ? (
-              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
+              <div className='bg-sky-600 dark:text-white hover:bg-gray-200 cursor-pointer my-4 p-2 rounded-lg inline-block'>
                 <Icon icon="streamline:subscription-cashflow-solid" width="32" height="32" />
               </div>
             ) : (
