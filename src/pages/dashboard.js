@@ -14,8 +14,8 @@ const dashboard = () => {
       <main className='min-h-screen'>
         <Layout className=''>
           <header className='flex lg:py-8 lg:justify-between px-4 pt-4'>
-            <AnimatedText text={"Dashboard"} className='!mb-16 !text-3xl lg:!text-sm lg:!text-left' />
-            <AnimatedText text={"Bem vindo de volta!"} className='!mb-16 !text-3xl lg:!text-sm lg:!text-right' />
+            <AnimatedText text={"Bem vindo de volta!"} className='!mb-16 !text-3xl lg:!text-sm lg:!text-left' />
+            <AnimatedText text={"Marcelo Car"} className='!mb-16 !text-3xl lg:!text-sm lg:!text-right' />
           </header>
         </Layout>
       </main>
