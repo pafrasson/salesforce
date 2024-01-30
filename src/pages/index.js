@@ -12,8 +12,8 @@ export default function Home() {
         <title>Salesforce - Astersoft</title>
         <meta name="description" content="" />
       </Head>
-      <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
-        <Layout className='pt-0'>
+      <main className='flex items-center text-dark w-full min-h-screen dark:text-light lg:pt-5'>
+        <Layout className=''>
           <div className="flex items-center justify-center w-full flex-col">
             <motion.div>
             <Image src={AsterImg} alt='PedroFrasson' className='w-20 h-auto md:inline-block md:w-20'

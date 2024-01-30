@@ -64,7 +64,7 @@ const NavBar = () => {
 
     return (
         <header className={`${roboto.className} w-full px-36 py-8 font-medium flex items-center justify-between
-        dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8
+        dark:text-light relative z-10 lg:hidden
         `}>
             <div className="w-full flex justify-between items-center lg:hidden">
                 <nav>

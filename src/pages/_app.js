@@ -1,9 +1,9 @@
 import '@/styles/globals.css'
-import { Roboto, Roboto_Serif } from "next/font/google"
+import { Roboto_Serif } from "next/font/google"
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
 import Footer from '@/components/Footer'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import Navigation from '@/components/mobile/Navigation'
 

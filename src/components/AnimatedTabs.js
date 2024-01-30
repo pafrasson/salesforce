@@ -12,7 +12,7 @@ export default function AnimatedTabs() {
     };
 
     return (
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center my-5">
             <div className="overflow-hidden flex flex-col">
                 <nav className="p-4 flex">
                         {tabs.map((item) => (
