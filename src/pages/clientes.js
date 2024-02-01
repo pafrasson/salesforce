@@ -21,7 +21,7 @@ const clientes = () => {
             <header className='flex sm:pb-0 lg:py-8 lg:justify-between px-4 pt-4'>
               <AnimatedText text={"Clientes"} className='!mb-16 sm:!mb-8 !text-3xl lg:!text-sm lg:!text-left' />
             </header>
-            <div className='bg-gray-100 min-h-screen'>
+            <div className='bg-gray-100 min-h-screen sm:pb-12'>
               <div className='p-4'>
                 <div className='w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto'>
                   <div className='my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 sm:text-sm grid-cols-2 items-center justify-between cursor-pointer'>
@@ -31,10 +31,10 @@ const clientes = () => {
                   <ul>
                     {data.map((order, id) => (
                       <li key={id} className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'>
-                        <div className='flex items-center'>
+                        <div className='flex items-center sm:text-sm p-1'>
                           <p className=''>{order.name.first + ' ' + order.name.last}</p>
                         </div>
-                        <p className='text-gray-600 sm:text-left text-right'>{order.name.first}@gmail.com</p>
+                        <p className='text-gray-600 sm:text-sm sm:text-left text-right'>{order.name.first}@gmail.com</p>
                       </li>
                     ))}
                   </ul>
