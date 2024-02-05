@@ -1,25 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { fetchData } from 'src/data/services/axios';
 
 const OSinput = () => {
+  const [atendentes, setAtendentes] = useState([]);
+
+  useEffect(() => {
+    const fetchAtendentes = async () => {
+      try {
+        const data = await fetchData('/api/attendant');
+        console.log('Dados da API:', data);
+        setAtendentes(data);
+      } catch (error) {
+        console.error('Erro ao buscar atendentes:', error.message);
+      }
+    };
+
+    fetchAtendentes();
+  }, []);
+
+
   return (
     <form className="bg-white p-6 border border-blue-500 rounded-md dark:bg-dark">
       <div className="mb-4">
-        <label htmlFor="atendente" className="block text-black dark:text-light font-bold mb-2">Atendente:</label>
+        <label htmlFor="atendente" className="block text-black dark:text-light font-bold mb-2">
+          Atendente:
+        </label>
         <select id="atendente" name="atendente" className="w-full p-2 border rounded-md">
-          
-          <option value="1">Atendente 1</option>
-          <option value="2">Atendente 2</option>
-          
+          {/* Mapeia os atendentes para criar as opções dinamicamente */}
+          {atendentes.map((atendente) => (
+            <option key={atendente.id} value={atendente.id}>
+              {atendente.name}
+            </option>
+          ))}
+
         </select>
       </div>
 
       <div className="mb-4">
         <label htmlFor="cliente" className="block text-black dark:text-light font-bold mb-2">Cliente:</label>
         <select id="cliente" name="cliente" className="w-full p-2 border rounded-md">
-          
+
           <option value="1">Cliente 1</option>
           <option value="2">Cliente 2</option>
-          
+
         </select>
       </div>
 
@@ -31,7 +54,7 @@ const OSinput = () => {
       <div className="mb-4">
         <label htmlFor="produtos" className="block text-black dark:text-light font-bold mb-2">Produtos:</label>
         <select id="produtos" name="produtos" multiple className="w-full p-2 border rounded-md">
-          
+
           <option value="1">Produto 1</option>
           <option value="2">Produto 2</option>
         </select>
@@ -40,18 +63,20 @@ const OSinput = () => {
       <div className="mb-4">
         <label htmlFor="servicos" className="block text-black dark:text-light font-bold mb-2">Serviços:</label>
         <select id="servicos" name="servicos" multiple className="w-full p-2 border rounded-md">
-          
+
           <option value="1">Serviço 1</option>
           <option value="2">Serviço 2</option>
-          
+
         </select>
       </div>
 
-      
 
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Enviar</button>
+
+      <button type="submit" className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">
+        Enviar
+      </button>
     </form>
-  )
-}
+  );
+};
 
-export default OSinput
+export default OSinput;
